@@ -113,7 +113,7 @@
                    provide our users with visual reports of YouTube Trends in the Current Market. The Analysis is 
                    also Provided in report form so you can download it to see it later.
            </p>
-           <a href="{% url 'youtube-report' %}">
+           <a href="{% url 'CSCL-home' %}">
             <button class="button" style="width:200px; height:70px ;background-color:#e60000; color:white">See Reports</button>
             </a>
         </div> 
@@ -131,7 +131,7 @@
                 Create your own fanbase with by creating the right content at the right time.
                 Join the Youtube community now .
            </p>
-           <a href="{% url 'youtube-home' %}">
+           <a href="{% url 'CSCL-home' %}">
           <button class="button" style="width:180px; height:63px ;background-color:#e60000; color:white">Go Home</button>
           </a>
         </div> 
@@ -143,19 +143,20 @@
     <br>
     <br>
     <br>
-				<!-- Start Nav Structure -->
+				<!-- Start Nav Structure   -->
 				<button class="cn-button" id="cn-button">+</button>
 				<div class="cn-wrapper" id="cn-wrapper">
 				    <ul>
 				      <ul>
-				      <li><a  href="{% url 'youtube-uk' %}">UK</a></li>
-				      <li><a  href="{% url 'youtube-india' %}">IND</a></li>
-				      <li><a  href="{% url 'youtube-home' %}">Home</a></li>
-				      <li><a  href="{% url 'youtube-us' %}">USA</a></li>
-                      <li><a  href="{% url 'youtube-report' %}">Repo</a></li>
+				      <li><a  href="{% url 'CSCL-suggestions' %}">Sugg.</a></li>
+				      <li><a  href="{% url 'CSCL-about' %}">About</a></li>
+				      <li><a  href="{% url 'CSCL-home' %}">Home</a></li>
+				      <li><a  href="{% url 'CSCL-forum' %}">Forum</a></li>
+                      <li><a  href="{% url 'logout' %}">Logout</a></li>
 				     </ul>
 				     </ul>
-				</div>
+                </div>
+              
 				<div id="cn-overlay" class="cn-overlay"></div>
 			</div>
 		</div>
