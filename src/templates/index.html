@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    {% if title %}
+    <title>Untangle | {{ title }} |</title>
+    {% else %}
+    <title>Youtube</title>
+    {% endif %}
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="sidenav">
+        <ul class="sidenav-nav">
+          <li>
+            <a id="ind" href="{% url 'youtube-india' %}">Dashboard</a>
+          </li>
+          <li>
+            <a href="{% url 'youtube-uk' %}">Profile</a>
+          </li>
+          <li>
+            <a href="{% url 'youtube-us' %}">Recommendation</a>
+          </li>
+        </ul>
+        <ul id="report" class="sidenav-nav">
+          <li>
+            <hr />
+          </li>
+          <li><a href="{% url 'youtube-report' %}">Discussion Forum</a></li>
+        </ul>
+      </div>
+      <header class="site-header">
+        <nav class="navbar navbar-expand-md bg-steel fixed-top">
+          <a class="navbar-brand mr-4" href="{% url 'youtube-home' %}"
+            ><img
+              class="icon-navbar"
+              src="{% static 'images/icon.png' %}"
+              alt="Youtube"
+              height="80px"
+              width="20px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggle"
+            aria-controls="navbarToggle"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{% url 'youtube-home' %}"
+                >Home</a>
+                <div class="navbar-nav mr-auto">
+                  <a class="nav-item nav-link" href="{% url 'youtube-about' %}"
+                    >About</a
+                  >
+                </div>
+            </div>
+
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="#">{{ user.username }}</a>
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+              {% else %}
+              <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+              <a class="nav-item nav-link" href="{% url 'register' %}"
+                >Register</a
+              >
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main role="main" class="container">
+        <br>
+        <br>
+        
+        <div class="row">
+          <div class="col-md-12">
+            {% if messages %} {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+            {% endfor %} {% endif %} {% block content %}{% endblock %}
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- charts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  </body>
+</html>

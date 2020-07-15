@@ -1,0 +1,58 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+class US(models.Model):
+    videoId = models.CharField(max_length=200)
+    numberOfTrendingDays = models.IntegerField()
+    startDate = models.CharField(max_length=30)
+    endDate = models.CharField(max_length=30)
+    title = models.CharField(max_length=200)
+    channelTitle = models.CharField(max_length=200)
+    categoryId = models.IntegerField()
+    startViews = models.IntegerField()
+    endViews = models.IntegerField()
+    startLikes = models.IntegerField()
+    endLikes = models.IntegerField()
+    startDislikes = models.IntegerField()
+    endDislikes = models.IntegerField()
+    startCommentCount = models.IntegerField()
+    endCommentCount = models.IntegerField()
+    trendingRank = models.IntegerField()
+
+class UK(models.Model):
+    videoId = models.CharField(max_length=200)
+    numberOfTrendingDays = models.IntegerField()
+    startDate = models.CharField(max_length=30)
+    endDate = models.CharField(max_length=30)
+    title = models.CharField(max_length=200)
+    channelTitle = models.CharField(max_length=200)
+    categoryId = models.IntegerField()
+    startViews = models.IntegerField()
+    endViews = models.IntegerField()
+    startLikes = models.IntegerField()
+    endLikes = models.IntegerField()
+    startDislikes = models.IntegerField()
+    endDislikes = models.IntegerField()
+    startCommentCount = models.IntegerField()
+    endCommentCount = models.IntegerField()
+    trendingRank = models.IntegerField()
+
+
+class India(models.Model):
+    videoId = models.CharField(max_length=200)
+    numberOfTrendingDays = models.IntegerField()
+    startDate = models.CharField(max_length=30)
+    endDate = models.CharField(max_length=30)
+    title = models.CharField(max_length=200)
+    channelTitle = models.CharField(max_length=200)
+    categoryId = models.IntegerField()
+    startViews = models.IntegerField()
+    endViews = models.IntegerField()
+    startLikes = models.IntegerField()
+    endLikes = models.IntegerField()
+    startDislikes = models.IntegerField()
+    endDislikes = models.IntegerField()
+    startCommentCount = models.IntegerField()
+    endCommentCount = models.IntegerField()
+    trendingRank = models.IntegerField()

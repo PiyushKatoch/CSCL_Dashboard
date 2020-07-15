@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/About.css' %}" />
+        <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+        <style>
+        body{
+            background-image: url("{% static 'images/about/bg4.jpg' %}"); 
+        }
+        </style>
+    </head>
+    <body>
+        <div class=container style="border-radius: 20px; border-style: solid; border-width: 5px; 
+        border-color:black;margin-top:20px;">
+            <br>
+            <h2 style="font-weight: lighter; color:white;" >About Us</h2>   
+        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex-container" style=" border-radius: 20px; border-style: solid; border-width: 5px; border-color:white;">
+        <div style="background-color: white; width:20%; height:200px ; padding-top: 50px;">
+            <img  src="{% static 'images/logo.png' %}" width="160px" height="160px" style="vertical-align: middle; "> 
+            </div>
+        <div style="align-content: center; background-color:white;  color:rgb(8, 8, 80); width:80%; height:185px; padding-top : 65px ">
+            <p style="font-size:35px;">Untangle is Computer Supported Learning Platform of NIIT University.   
+            </p>
+    </div>
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex-container">
+        <div style="vertical-align: middle;  align-self: flex-start; width:19.5%; height:520px ; margin-left:2%; margin-right:2%;">
+            <img  src="{% static 'images/about/123.gif' %}" width=100% height="210px" 
+            style =" border-color: black; border-radius: 20px; border-style: solid; border-width:5px;margin-top:12%; "> 
+            <img  src="{% static 'images/about/5.gif' %}" width=100% height="210px" 
+            style =" border-color: black; border-radius: 20px; border-style: solid; border-width:5px; margin-top:8%"> 
+        </div>
+        <div style="align-content: center; background-color: white; color:#e60000; 
+        width:51%; height:520px ; 
+        border-color: black; border-radius: 20px; border-style: solid; border-width:5px;">
+            <h3 style="color: black;">What does Untangle Do ?</h3>
+            <p style="font-size: 20px; padding: 20%; padding-top: 3%; color:rgb(33, 33, 138)">
+                Untangle platform, on which students in various academic years can 
+                establish connections with each other based on common study interest and 
+                collaborate on various projects online. Untangle  helps the 
+                educators to keep a check on various online collaborations between the 
+                students and guide them accordingly. Untangle keeps the 
+                educators updated about the various online courses popular among the students.
+
+           </p>
+        </div>
+        <div style="vertical-align: middle;  align-self: flex-start; width:19.5%; height:520px ;
+         margin-left:1.5%; margin-right:2%;">
+            <img  src="{% static 'images/about/2.gif' %}" width=100% height="210px" 
+            style =" border-color: black; border-radius: 20px; border-style: solid; border-width:5px;margin-top:12%; "> 
+            <img  src="{% static 'images/about/21.gif' %}" width=100% height="210px" 
+            style =" border-color: black; border-radius: 20px; border-style: solid; border-width:5px;background-color:white; margin-top:8%"> 
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex-container" style="border-radius: 20px; border-style: solid; border-width: 5px; border-color:white;">
+        <div style="background-color: white; width:40%; height:120px ;   ">
+            <img  src="{% static 'images/about/16.gif' %}" width="100px" height="100px" 
+            style="vertical-align: middle; border-radius: 25%; padding: 10px; padding-right: 20px; float:right"> 
+            </div>
+        
+        <div style="text-align: left; background-color:white;  color:#e60000;
+         width:60%; height:120px; ">
+            <h3>How do we do it ?   
+            </h3>
+        </div>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="flex-container">
+        <div style="align-content: center; background-color:#ffcccc; color:black; width:50%; height:520px">
+            <h3 style=" padding-top: 5%;">Data Collection and Cleaning</h3>
+            <p  style="font-size: 20px; padding: 12%; padding-top: 3%; text-align: justify;">
+                In any Analytics Website Data is the Backbone. We collect YouTube Data across 3 Countries around the globe.
+                This Data contains each and very detail about the Information of a every youtube video in that region.
+                Once we gather all the data, we extract the useful information from that data which can be used 
+                for Analysis. Now we are all set to Analyse the Data.
+           </p>
+        </div>
+        <div style="vertical-align: middle; align-content: flex-end;  width:50% ">
+            <img  src="{% static 'images/about/11.gif' %}" width="100%" height="520px" > 
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex-container">
+        <div style="vertical-align: middle; align-content: flex-end;  width:50% ">
+            <img  src="{% static 'images/about/8.gif' %}" width="100%" height="550px" > 
+        </div>
+        <div style="align-content: center; background-color:#df8484; color:black; width:50%; height:550px" >
+            <h3 style=" padding-top: 5%;">Data Analysis and Report Generation</h3>
+            <p  style="font-size: 20px; padding-left: 10%;padding-right: 10%; padding-bottom: 3%; padding-top: 3%; text-align: justify;">
+                   Here at YouTube Analytics we have gathered a team of Experts in the field of Data Science and
+                   Statics. These Scientists extract all the possible information form the data available and
+                   provide our users with visual reports of YouTube Trends in the Current Market. The Analysis is 
+                   also Provided in report form so you can download it to see it later.
+           </p>
+           <a href="{% url 'youtube-report' %}">
+            <button class="button" style="width:200px; height:70px ;background-color:#e60000; color:white">See Reports</button>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="flex-container ">
+        <div style="align-content: center; background-color:#ffcccc; color:black; width:50%; height:550px">
+            <h3 style=" padding-top: 3%;">You are all set to become a<br> YOUTUBE CREATOR</h3>
+            <p  style="font-size: 20px; padding-right: 10%; padding-left: 10%; text-align: justify;">
+                Enjoy earning money by doing what you love. With our Reports you will be able to
+                see which youtube category is more saturated and which one has a room to grow.
+                Create your own fanbase with by creating the right content at the right time.
+                Join the Youtube community now .
+           </p>
+           <a href="{% url 'youtube-home' %}">
+          <button class="button" style="width:180px; height:63px ;background-color:#e60000; color:white">Go Home</button>
+          </a>
+        </div> 
+        <div style="vertical-align: middle; align-content: flex-end;  width:50% ">
+            <img  src="{% static 'images/about/12.gif' %}" width="100%" height="550px" > 
+        </div> 
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+				<!-- Start Nav Structure -->
+				<button class="cn-button" id="cn-button">+</button>
+				<div class="cn-wrapper" id="cn-wrapper">
+				    <ul>
+				      <ul>
+				      <li><a  href="{% url 'youtube-uk' %}">UK</a></li>
+				      <li><a  href="{% url 'youtube-india' %}">IND</a></li>
+				      <li><a  href="{% url 'youtube-home' %}">Home</a></li>
+				      <li><a  href="{% url 'youtube-us' %}">USA</a></li>
+                      <li><a  href="{% url 'youtube-report' %}">Repo</a></li>
+				     </ul>
+				     </ul>
+				</div>
+				<div id="cn-overlay" class="cn-overlay"></div>
+			</div>
+		</div>
+        <script src="{% static 'js/about.js' %}"></script>
+    </body>
+</html>

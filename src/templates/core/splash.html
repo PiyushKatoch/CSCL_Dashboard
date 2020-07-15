@@ -1,0 +1,34 @@
+﻿{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+       
+
+        .preload {
+            width: 100%;
+            height: 100%;
+            background-image: url('{% static "images/splash_bg.png" %}');
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="preload">
+        <div class="logo">
+            <!--  <img src="{% static 'images/pic2.png' %}"" width="210" height="90" style="vertical-align:middle">-->
+                <img src="{% static 'images/logo.png' %}" alt="text-img" width="350" height="217" style="vertical-align:middle">
+
+            </div>
+            <div class="loader-frame">
+                <div class="loader1" id="loader1"></div>
+                <div class="loader2" id="loader2"></div>
+            </div>
+        </div>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+    {% endblock content %}
+

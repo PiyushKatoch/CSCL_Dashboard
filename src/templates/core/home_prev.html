@@ -1,0 +1,323 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<!-- swipper slider -->
+
+<style>.slide__caption {
+  bottom: 0;
+  min-height:fit-content ;
+  left: 0;
+  position:absolute;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0px 0px 30px 30px;
+  padding: 5px;
+}
+#grad1 {
+  height: 170px;
+  background-image: linear-gradient(to right,#ff8042, #fb5f69);
+  border-radius:30px;
+}
+#grad2 {
+  height: 170px;
+  background-image: linear-gradient(to right, #fb5f69,#d65187);
+  border-radius: 30px;
+}
+#grad3 {
+  height: 170px;
+  background-image: linear-gradient(to right,#d65187,#a25196
+  );
+  border-radius: 30px;
+
+}
+#grad4 {
+  height: 170px;
+  background-image: linear-gradient(to right,#a25196,#d65187
+  );
+  border-radius: 30px;
+
+}   
+#grad5 {
+  height: 170px;
+  background-image: linear-gradient(to right,#d65187,#fb5f69
+  );
+  border-radius: 30px;
+
+} 
+#grad6 {
+  height: 170px;
+  background-image: linear-gradient(to right,#fb5f69,#ff8042
+  );
+  border-radius: 30px;
+
+} 
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #ff8042;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background:#a25196;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 10px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+<div class="container" style="position:absolute;
+left:0;
+right:0;margin-left:80px; margin-top:20px">
+  <div class="col">
+    <div class="slick-container">
+      <h1 class="slick-header" style="text-align: center;color:black">Welcome to the World of YouTube</h1>
+<br>
+      <img
+        src="{% static 'images/carousal/chevron-left-solid.svg' %}"
+        alt="Left"
+        class="prev"
+      />
+      <img
+        src="{% static 'images/carousal/chevron-right-solid.svg' %}"
+        alt="Left"
+        class="next"
+      />
+
+      <div class="slick-wrapper">
+        <!-- One -->
+        <div class="slick-slide"  id="grad1">
+          <div class="row box-slide">
+            <div class="img-box" style="margin: auto;">
+              <a href="https://www.youtube.com">
+                <img
+                src="{% static 'images/carousal/youtube.png' %}"
+                alt="Image"
+              />
+              </a>
+            </div>
+            <div class="slide__caption">Founded on February 14th(Valentine’s Day!), 2005</div>
+          </div>
+        </div>
+
+        <!-- Two -->
+        <div class="slick-slide"  id="grad2">
+          <div class="row box-slide">
+            <div class="img-box" style="margin: auto;">
+              <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw">
+                <img
+                src="{% static 'images/carousal/firstvid.png' %}"
+                alt="Image"
+              />
+              </a>
+            </div>
+            <div class="slide__caption">The First YouTube Video (April 2005), featured its co-founder Jawed Karim.</div>
+          </div>
+        </div>
+        <!-- Three -->
+        <div class="slick-slide"  id="grad3">
+          <div class="row box-slide">
+            <div class="img-box"style="margin: auto;">
+              <img
+                src="{% static 'images/carousal/paypal.png' %}"
+                alt="Image"
+              />
+            </div>
+            <div class="slide__caption">YouTube was founded by 3 former employees of PayPal.</div>
+          </div>
+        </div>
+        <!-- Four -->
+        <div class="slick-slide"  id="grad4">
+          <div class="row box-slide">
+            <div class="img-box"style="margin: auto;">
+              <a href="https://www.youtube.com/watch?v=9bZkp7q19f0">
+                <img
+                src="{% static 'images/carousal/psy.png' %}"
+                alt="Image"
+              />
+            </a>
+            </div>
+            <div class="slide__caption">'Gangnam Style' was so popular, it broke YouTube's view counter.</div>
+          </div>
+        </div>
+        <!-- Five -->
+        <div class="slick-slide"  id="grad5">
+          <div class="row box-slide">
+            <div class="img-box"style="margin: auto;">
+              <a href="https://www.youtube.com/watch?v=4hvtXuO5GzU">
+                <img style="width: max-content;"
+                src="{% static 'images/carousal/annefrank.png' %}"
+                alt="Image"
+              />
+            </a>
+            </div>
+            <div class="slide__caption">Anne Frank is on YouTube, captured on film while looking at a wedding.</div>
+          </div>
+        </div>
+        <!-- Six -->
+        <div class="slick-slide"  id="grad6">
+          <div class="row box-slide">
+            <div class="img-box"style="margin: auto;">
+              <a href="https://www.youtube.com/watch?v=r6faUd2fV4U">
+              <img
+                src="{% static 'images/carousal/cat.png' %}"
+                alt="Image"
+              />
+            </a>
+            </div>
+            <div class="slide__caption">The oldest video of cats on YouTube dates from 1894.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slider end -->
+<br>
+<div>
+    <div class="row" style="margin-left:50px ;">
+      <div class="col-11">
+        <div class="card pt-2 mt-2 ml-2">
+          <canvas
+            id="bubble-chart"
+            url-endpoint="{% url 'bubble-chart' %}"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card border-dark mb-5 mt-5 ml-5 col-sm-4" style="max-width: 18rem;">
+    <div class="card-body text-dark">
+      <div class="row">
+        <div class="col-sm-8">
+          <b> Max Likes</b><br>
+          {{maxLike}}
+        </div>
+        <div class="col-sm-4">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-up float-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16v-1c.563 0 .901-.272 1.066-.56a.865.865 0 0 0 .121-.416c0-.12-.035-.165-.04-.17l-.354-.354.353-.354c.202-.201.407-.511.505-.804.104-.312.043-.441-.005-.488l-.353-.354.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315L12.793 9l.353-.354c.353-.352.373-.713.267-1.02-.122-.35-.396-.593-.571-.652-.653-.217-1.447-.224-2.11-.164a8.907 8.907 0 0 0-1.094.171l-.014.003-.003.001a.5.5 0 0 1-.595-.643 8.34 8.34 0 0 0 .145-4.726c-.03-.111-.128-.215-.288-.255l-.262-.065c-.306-.077-.642.156-.667.518-.075 1.082-.239 2.15-.482 2.85-.174.502-.603 1.268-1.238 1.977-.637.712-1.519 1.41-2.614 1.708-.394.108-.62.396-.62.65v4.002c0 .26.22.515.553.55 1.293.137 1.936.53 2.491.868l.04.025c.27.164.495.296.776.393.277.095.63.163 1.14.163h3.5v1H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-dark mb-5 mt-5 ml-5 col-sm-4" style="max-width: 18rem;">
+    <div class="card-body text-dark">
+      <div class="row">
+        <div class="col-sm-8">
+          <b> Max Views</b><br>
+          {{maxView}}
+        </div>
+        <div class="col-sm-4">
+          <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-view-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-dark mb-5 mt-5 ml-5 col-sm-4" style="max-width: 18rem;">
+    <div class="card-body text-dark">
+      <div class="row">
+        <div class="col-sm-8">
+          <b> Max Dislikes </b><br>
+        {{maxDislike}}
+      </div>
+      <div class="col-sm-4">
+        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-hand-thumbs-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.956 14.534c.065.936.952 1.659 1.908 1.42l.261-.065a1.378 1.378 0 0 0 1.012-.965c.22-.816.533-2.512.062-4.51.136.02.285.037.443.051.713.065 1.669.071 2.516-.211.518-.173.994-.68 1.2-1.272a1.896 1.896 0 0 0-.234-1.734c.058-.118.103-.242.138-.362.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.094 2.094 0 0 0-.16-.403c.169-.387.107-.82-.003-1.149a3.162 3.162 0 0 0-.488-.9c.054-.153.076-.313.076-.465a1.86 1.86 0 0 0-.253-.912C13.1.757 12.437.28 11.5.28v1c.563 0 .901.272 1.066.56.086.15.121.3.121.416 0 .12-.035.165-.04.17l-.354.353.353.354c.202.202.407.512.505.805.104.312.043.44-.005.488l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.415-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.353.352.373.714.267 1.021-.122.35-.396.593-.571.651-.653.218-1.447.224-2.11.164a8.907 8.907 0 0 1-1.094-.17l-.014-.004H9.62a.5.5 0 0 0-.595.643 8.34 8.34 0 0 1 .145 4.725c-.03.112-.128.215-.288.255l-.262.066c-.306.076-.642-.156-.667-.519-.075-1.081-.239-2.15-.482-2.85-.174-.502-.603-1.267-1.238-1.977C5.597 8.926 4.715 8.23 3.62 7.93 3.226 7.823 3 7.534 3 7.28V3.279c0-.26.22-.515.553-.55 1.293-.138 1.936-.53 2.491-.869l.04-.024c.27-.165.495-.296.776-.393.277-.096.63-.163 1.14-.163h3.5v-1H8c-.605 0-1.07.08-1.466.217a4.823 4.823 0 0 0-.97.485l-.048.029c-.504.308-.999.61-2.068.723C2.682 1.815 2 2.434 2 3.279v4c0 .851.685 1.433 1.357 1.616.849.232 1.574.787 2.132 1.41.56.626.914 1.28 1.039 1.638.199.575.356 1.54.428 2.591z"/>
+        </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<center>
+<div style="padding: 20px; float:left; margin-left:5px" >
+  <p>Drag the slider to calculate earnings</p>
+  <div>
+    <div class="slidecontainer">
+      <label for="myRange">Views/Day</label><br>
+      <input type="range" min="0" max="50000" value="25000" class="slider" id="views" style="width:400px">
+      <p>Value: <span id="vop"></span></p>
+    </div>
+    
+    <div class="slidecontainer">
+        <label for="myRange">CPM</label><br>
+        <input type="range" min="0.0" max="10.0" value="1.36" step="0.1" class="slider" id="ctr" style="width:400px">
+        <p>Value: <span id="cop"></span></p>
+      </div>
+  </div>
+</div>
+<div style="background-color: rgba(0,0,0,0.4); width:450px; border-radius:30px; padding:20px; float:left" id=grad1>
+  Estimated Revenue: in (USD.)
+  <br>
+  (If unaware of the CPM set it to default of 1.36)
+  <h1 id="result"></h1>
+</div>
+</center>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<script src="{% static 'js/home_graph.js' %}"></script>
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+<script>
+  $(".slick-wrapper").slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    nextArrow: $(".next"),
+    prevArrow: $(".prev"),
+  });
+  var slider = document.getElementById("views");
+var slider2 = document.getElementById("ctr");
+var output = document.getElementById("vop");
+var output2 = document.getElementById("cop");
+output.innerHTML = slider.value;
+output2.innerHTML = slider2.value;
+var x =1000
+var y =1.36
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  x = this.value
+  document.getElementById("result").innerHTML = x*y
+
+}
+slider2.oninput = function(){
+  output2.innerHTML = this.value;
+  y=this.value
+  document.getElementById("result").innerHTML = x*y
+}
+  
+</script>
+{% endblock content %}
