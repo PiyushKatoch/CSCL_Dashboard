@@ -42,9 +42,9 @@
                               <div class="card stretch-card mb-3">
                                   <div class="card-body d-flex flex-wrap justify-content-between">
                                       <div>
-                                          <h4 class="font-weight-semibold mb-1 text-black"> Course Suggestions </h4>
+                                          <h4 class="font-weight-semibold mb-1 text-black">Course Suggestions </h4>
                                       </div>
-                                      <h3 class="text-success font-weight-bold">+30</h3>
+                                      <h3 class="text-success font-weight-bold">5</h3>
                                   </div>
                               </div>
                               <div class="card stretch-card mb-3">
@@ -52,26 +52,10 @@
                                       <div>
                                           <h4 class="font-weight-semibold mb-1 text-black">Articles Suggestions</h4>
                                       </div>
-                                      <h3 class="text-success font-weight-bold">+40</h3>
+                                      <h3 class="text-success font-weight-bold">3</h3>
                                   </div>
                               </div>
-                              <div class="card mt-3">
-                                  <div class="card-body d-flex flex-wrap justify-content-between">
-                                      <div>
-                                          <h4 class="font-weight-semibold mb-1 text-black">Books Suggestions </h4>
-                                      </div>
-                                      <h3 class="text-danger font-weight-bold">+20</h3>
-                                  </div>
-                              </div>
-                              <div class="card mt-3">
-                                  <div class="card-body d-flex flex-wrap justify-content-between">
-                                      <div>
-                                          <h4 class="font-weight-semibold mb-1 text-black">Teacher Notes </h4>
-                                      </div>
-                                      <h3 class="text-danger font-weight-bold">+20</h3>
-                                  </div>
-                              </div>
-                          </div>
+                            </div>
 
                           <div class="col-xl-8 stretch-card grid-margin">
                               <div class="card">
@@ -114,11 +98,11 @@
                                                               </select>
                                                           </div>
                                                       </td>
-                                                      <td>XXXXXX</td>
+                                                      <td><button>View Profile</button></td>
                                                   </tr>
                                                   <tr>
                                                       <td>
-                                                          <img src="{% static 'images/faces/face3.jpg' %}" class="mr-2" alt="image" /> Ranuq Suri
+                                                          <img src="{% static 'images/faces/face3.jpg' %}" class="mr-2" alt="image" /> Piyush Katoch
                                                       </td>
                                                       <td>
                                                           <div class="d-flex">
@@ -132,13 +116,14 @@
                                                       </td>
                                                       <td>
                                                           <div class="d-flex">
-                                                              <span class="pr-2 d-flex align-items-center">1</span>
+                                                              <span class="pr-2 d-flex align-items-center">2</span>
                                                               <select id="star-1" name="rating" autocomplete="off">
                                                                   <option value="1">Project-1</option>
+                                                                  <option value="1">Project-2</option>
                                                               </select>
-                                                          </div>a
+                                                          </div>
                                                       </td>
-                                                      <td>XXXXXXX</td>
+                                                      <td><button>View Profile</button></td>
                                                   </tr>
                                                   <tr>
                                                       <td>
@@ -156,64 +141,19 @@
                                                               </select>
                                                           </div>
                                                       </td>
-                                                      <td>XXXXXXX</td>
-                                                      <td>XXXXXXX</td>
+                                                      <td>
+                                                        <div class="d-flex">
+                                                            <span class="pr-2 d-flex align-items-center">3</span>
+                                                            <select id="star-1" name="rating" autocomplete="off">
+                                                                <option value="1">Project-1</option>
+                                                                <option value="1">Project-2</option>
+                                                                <option value="1">Project-3</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td><button>View Profile</button></td>
                                                   </tr>
-                                                  <tr>
-                                                  <tr>
-                                                      <td>
-                                                          <img src="{% static 'images/faces/face2.jpg' %} " class="mr-2" alt="image" /> Shubhankar Dhruv
-                                                      </td>
-                                                      <td>
-                                                          <div class="d-flex">
-                                                              <span class="pr-2 d-flex align-items-center">4</span>
-                                                              <select id="star-1" name="rating" autocomplete="off">
-                                                                  <option value="1">Course-1</option>
-                                                                  <option value="2">Course-2</option>
-                                                                  <option value="3">Course-3</option>
-                                                                  <option value="4">Course-4</option>
-                                                              </select>
-                                                          </div>
-                                                      </td>
-                                                      <td>XXXXXX</td>
-                                                      <td>XXXXXX</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td>
-                                                          <img src="{% static 'images/faces/face3.jpg' %}" class="mr-2" alt="image" /> Ranuq Suri
-                                                      </td>
-                                                      <td>
-                                                          <div class="d-flex">
-                                                              <span class="pr-2 d-flex align-items-center">3</span>
-                                                              <select id="star-1" name="rating" autocomplete="off">
-                                                                  <option value="1">Course-1</option>
-                                                                  <option value="2">Course-2</option>
-                                                                  <option value="3">Course-3</option>
-                                                              </select>
-                                                          </div>
-                                                      </td>
-                                                      <td>XXXXXX</td>
-                                                      <td>XXXXXXX</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td>
-                                                          <img src="{% static 'images/faces/face4.jpg' %}" class="mr-2" alt="image" /> Shreya Singi
-                                                      </td>
-                                                      <td>
-                                                          <div class="d-flex">
-                                                              <span class="pr-2 d-flex align-items-center">5</span>
-                                                              <select id="star-1" name="rating" autocomplete="off">
-                                                                  <option value="1">Course-1</option>
-                                                                  <option value="2">Course-2</option>
-                                                                  <option value="3">Course-3</option>
-                                                                  <option value="2">Course-4</option>
-                                                                  <option value="3">Course-5</option>
-                                                              </select>
-                                                          </div>
-                                                      </td>
-                                                      <td>XXXXXXX</td>
-                                                      <td>XXXXXXX</td>
-                                                  </tr>
+                                                  
                                               </tbody>
                                           </table>
                                       </div>

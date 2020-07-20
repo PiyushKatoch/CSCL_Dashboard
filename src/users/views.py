@@ -28,6 +28,7 @@ def junior(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
+            stream = form.cleaned_data.get('stream')
             messages.success(request, f'Account created Now you can Log In !!')
             return redirect('login')
             
@@ -37,6 +38,8 @@ def junior(request):
         'form': form
     }
     return render(request, 'users/junior.html', context)
+
+
 
 def senior(request):
     if request.method == 'POST':
@@ -74,8 +77,7 @@ def teacher(request):
 def profile(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(
-            request.POST, request.FILES, instance=request.user.profile)
+        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
 
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()

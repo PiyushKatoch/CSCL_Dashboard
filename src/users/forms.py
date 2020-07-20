@@ -10,14 +10,15 @@ STREAM = (
     ('','Choose...'),
     ('CSE', 'Computer Science Engineering'),
     ('ECE', 'Electrical and Computer Engineering '),
-    ('BIO', 'BioTech Engineering')
+    ('BIO-TECH', 'BioTech Engineering')
 )
 
 SPECIALIZATION = (
     ('','Choose...'),
-    ('DS', 'Data Science'),
-    ('AI', 'Artificila Intelligence'),
-    ('CYS', 'Cyber Security')
+    ('Data Science', 'Data Science'),
+    ('Artificial Intelligence', 'Artificial Intelligence'),
+    ('Cyber Security', 'Cyber Security'),
+    ('ECE-1','ECE Specialization')
 )
 
 
@@ -41,37 +42,37 @@ class JuniorRegisterForm(UserCreationForm):
      specialization = forms.ChoiceField(
          label='Select your Specialization you aspire to be in ?',
          choices=SPECIALIZATION,)
-
+    
      class Meta:
         model = User
-        fields = ['username' , 'email','stream','specialization','password1' , 'password2']
+        fields = ['username','email','stream','specialization','password1','password2']
 
 class SeniorRegisterForm(UserCreationForm):
     email = forms.EmailField()
-
-  
-
+    specialization = forms.ChoiceField(
+         label='Select your Specialization you are in ?',
+         choices=SPECIALIZATION,)
+    courses=forms.CharField(label='Top 5 Courses you want to Recommend | Format - course1-udemy,course2-courera,course3-platform_name')
+    articles=forms.CharField(label='Top 5 Articles you want to Recommend | Format - article1-google,article2-wikipedia,article3-platform_name')
+    projects=forms.CharField(label='Top 5 Projects you want to Collaborate on | Format - Project1-discription,Project2-discription')
     class Meta:
         model = User
-        fields = ['username' , 'email','password1' , 'password2']
+        fields = ['username' , 'email','specialization','courses','articles','projects','password1' , 'password2']
 
 class TeacherRegisterForm(UserCreationForm):
     email = forms.EmailField()
-
-  
-
+    teacherID = forms.CharField()
     class Meta:
         model = User
-        fields = ['username' , 'email','password1' , 'password2']
+        fields = ['username' , 'email','teacherID','password1' , 'password2']
 
 
     
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
-
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['username','email']
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
