@@ -4,11 +4,17 @@ The observations made from the visualizations of the collected data from the sur
 The second major observation made was that, even though online resources being more popular among the students, majority still finds collaborating offline (like sharing notes physically, having discussions personally) more comfortable. 
 So, the conclusions drawn out from the research showed that there was a need of a platform, on which students in various academic years can establish connections with each other based on common study interest and collaborate on various projects online. The platform would also help the educators to keep a check on various online collaborations between the students and guide them accordingly. The platform will also keep the educators updated about the various online course Popular among the students.
 We came up with the idea to create a CSCL platform that would solve the following problems:
+
 •	Most of the first year students are clueless about which subject to focus on from the very start to get a better grip on the specialization they want to get into.
+
 •	Most of the second year Students are do not know which online courses are better in comparison to each other, suggestions and guidance from the seniors would help them choose what is best for them.
+
 •	There is a need to educate the first and second year students about the correct coding practices that they should inculcate within themselves from the very start.
+
 •	Third Year students have a lot of projects to do, apart from the semester projects they are also involved in projects from various companies, personal projects or any start-up that they have built. For these projects they may require a dedicated team but they are not able to identify the right candidates for the job.
+
 •	The teachers are not aware about the various courses that students are opting for besides their usual curriculum courses.
+
 •	There is no discussion forum present within the university where students in various academic years and the teachers could discuss questions and different approaches to a single problem.
 
 We have named the model that we are proposing as “Untangle”. The following proposed Model has the following components.
